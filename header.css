@@ -11,3 +11,9 @@
  .top .app-nav{width:100%;min-width:0}
  .top .app-nav a{flex:1;min-width:0}
 }
+
+/* Four categories keep their large labels without compressing the long final label. */
+.top .app-nav{overflow-x:auto;scrollbar-width:none}
+.top .app-nav::-webkit-scrollbar{display:none}
+.top .app-nav a{flex:1 0 60px;white-space:nowrap}
+.top .app-nav a:last-child{flex:2 0 132px}
