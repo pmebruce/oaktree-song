@@ -1,0 +1,13 @@
+/* Shared header geometry for every section. */
+.top{padding:16px 0;gap:12px}
+.top .brand{height:42px;min-height:42px;margin:0;gap:11px;font-size:24px;line-height:30px}
+.top .brand>span:first-child{flex:none;width:42px;height:42px;display:grid;place-items:center;border-radius:14px;font-size:24px;line-height:1}
+.top .app-nav{box-sizing:border-box;height:68px;margin:0;padding:4px;gap:5px;align-items:stretch}
+.top .app-nav a{box-sizing:border-box;height:60px;min-height:60px;margin:0;padding:12px 6px;display:flex;align-items:center;justify-content:center;line-height:1.35}
+@media(max-width:700px){
+ .shell{padding-left:16px;padding-right:16px}
+ .top{display:grid;grid-template-columns:minmax(0,1fr);justify-content:normal;align-items:start;row-gap:12px;column-gap:0}
+ .top .brand>span:first-child{width:36px;height:36px}
+ .top .app-nav{width:100%;min-width:0}
+ .top .app-nav a{flex:1;min-width:0}
+}
