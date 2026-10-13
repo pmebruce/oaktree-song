@@ -17,3 +17,7 @@
 .top .app-nav::-webkit-scrollbar{display:none}
 .top .app-nav a{flex:1 0 60px;white-space:nowrap}
 .top .app-nav a:last-child{flex:2 0 132px}
+
+/* Consistent hero heading typography across all four sections. */
+.hero h1{font-size:clamp(35px,5vw,58px);font-weight:700;line-height:1.2;letter-spacing:0;margin:12px 0}
+@media(max-width:700px){.hero h1{font-size:clamp(28px,9.4vw,35px)}}
