@@ -21,3 +21,6 @@
 /* Consistent hero heading typography across all four sections. */
 .hero h1{font-size:clamp(35px,5vw,58px);font-weight:700;line-height:1.2;letter-spacing:0;margin:12px 0}
 @media(max-width:700px){.hero h1{font-size:clamp(28px,9.4vw,35px)}}
+
+/* Shared English eyebrow typography above the hero headings. */
+.hero .eyebrow{font-family:ui-rounded,"Noto Sans TC","PingFang TC",system-ui,sans-serif;font-size:12px;font-weight:900;line-height:1.5;letter-spacing:.16em;color:#638571}
