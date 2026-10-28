@@ -1,4 +1,4 @@
-/* Homepage installation control. Song lists and playback are unchanged. */
+/* Shared installation control for all songbook pages. */
 (()=>{
  'use strict';
  let pending=null;
@@ -7,7 +7,8 @@
  const installed=()=>window.matchMedia('(display-mode: standalone)').matches||navigator.standalone;
  function setup(){
   const button=get('oakInstallButton'),dialog=get('oakInstallDialog'),native=get('oakNativeInstall'),status=get('oakInstallStatus');
-  const markInstalled=()=>{button.textContent='已加入主畫面';button.disabled=true;native.hidden=true;status.textContent='已加入主畫面。';};
+  const banner=button.closest('.oak-install-banner');
+  const markInstalled=()=>{banner.hidden=true;native.hidden=true;status.textContent='已加入主畫面。';};
   const help=()=>{native.hidden=!pending;status.textContent=installed()?'你已經從主畫面開啟歌單囉！':'';if(!dialog.open)dialog.showModal();};
   const requestInstall=async()=>{
    if(!pending){help();return}
